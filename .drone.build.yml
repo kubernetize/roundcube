@@ -1,0 +1,27 @@
+kind: pipeline
+name: build
+type: kubernetes
+
+resources:
+  requests:
+    memory: 128Mi
+
+steps:
+- name: roundcube
+  image: plugins/docker
+  pull: always
+  settings:
+    repo: registry.lan/krichy/roundcube
+    registry: registry.lan
+    insecure: true
+    auto_tag: true
+
+  privileged: true
+  volumes:
+  - name: docker
+    path: /var/lib/docker
+
+volumes:
+- name: docker
+  temp: {}
+
