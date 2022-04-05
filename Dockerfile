@@ -11,5 +11,3 @@ RUN curl -sL https://github.com/roundcube/roundcubemail/releases/download/${RC_V
     chown 8080:8080 /var/www/html/logs
 
 USER 8080
-
-CMD ["/usr/local/sbin/httpd"]
