@@ -1,4 +1,7 @@
-FROM registry.lan/krichy/webhost-php8
+FROM ghcr.io/rkojedzinszky/webhost-images/php8
+
+LABEL org.opencontainers.image.authors "Richard Kojedzinszky <richard@kojedz.in>"
+LABEL org.opencontainers.image.source https://github.com/kubernetize/roundcube
 
 ARG RC_VER=1.5.2
 
