@@ -13,4 +13,6 @@ RUN apk --no-cache add curl tar && \
 RUN curl -sL https://github.com/roundcube/roundcubemail/releases/download/${RC_VER}/roundcubemail-${RC_VER}-complete.tar.gz | tar xzf - -C /var/www/html --strip-components=1 && \
     chown 8080:8080 /var/www/html/logs
 
+COPY assets/ /
+
 USER 8080
