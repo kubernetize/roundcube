@@ -1,4 +1,4 @@
-FROM ghcr.io/rkojedzinszky/webhost-images/php8
+FROM ghcr.io/rkojedzinszky/webhost-images/php81
 
 LABEL org.opencontainers.image.authors "Richard Kojedzinszky <richard@kojedz.in>"
 LABEL org.opencontainers.image.source https://github.com/kubernetize/roundcube
