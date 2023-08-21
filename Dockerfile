@@ -3,7 +3,7 @@ FROM ghcr.io/rkojedzinszky/webhost-images/php82
 LABEL org.opencontainers.image.authors "Richard Kojedzinszky <richard@kojedz.in>"
 LABEL org.opencontainers.image.source https://github.com/kubernetize/roundcube
 
-ARG RC_VER=1.6.1
+ARG RC_VER=1.6.2
 
 USER 0
 
