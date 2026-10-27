@@ -16,4 +16,9 @@ RUN phpver=$(php -r 'echo PHP_MAJOR_VERSION . PHP_MINOR_VERSION;') && \
     curl -sL https://github.com/roundcube/roundcubemail/releases/download/${RC_VER}/roundcubemail-${RC_VER}-complete.tar.gz | tar xzf - -C /var/www/html --strip-components=1 && \
     chown 8080:8080 /var/www/html/logs
 
+# Tune PHP settings via environment
+ENV \
+    PHP_POST_MAX_SIZE=32M \
+    PHP_UPLOAD_MAX_FILESIZE=20M
+
 USER 8080
